@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Support - BreakUp?</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .header .tagline {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 40px 30px;
+        }
+
+        .section {
+            margin-bottom: 35px;
+        }
+
+        .section h2 {
+            font-size: 1.4rem;
+            color: #667eea;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .section p {
+            margin-bottom: 12px;
+            color: #555;
+        }
+
+        .contact-card {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            padding: 12px;
+            background: white;
+            border-radius: 8px;
+            transition: transform 0.2s;
+        }
+
+        .contact-item:hover {
+            transform: translateX(5px);
+        }
+
+        .contact-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .contact-icon svg {
+            width: 20px;
+            height: 20px;
+            fill: white;
+        }
+
+        .contact-info h3 {
+            font-size: 0.9rem;
+            color: #888;
+            margin-bottom: 3px;
+        }
+
+        .contact-info a,
+        .contact-info span {
+            font-size: 1.1rem;
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-info a:hover {
+            color: #667eea;
+        }
+
+        .faq-item {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 12px;
+        }
+
+        .faq-item h3 {
+            font-size: 1.1rem;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .faq-item p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 14px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        .footer {
+            background: #f8f9fa;
+            padding: 25px 30px;
+            text-align: center;
+            color: #888;
+            font-size: 0.9rem;
+            border-top: 1px solid #eee;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            .header {
+                padding: 30px 20px;
+            }
+
+            .header h1 {
+                font-size: 1.8rem;
+            }
+
+            .header .tagline {
+                font-size: 1rem;
+            }
+
+            .content {
+                padding: 25px 20px;
+            }
+
+            .section h2 {
+                font-size: 1.2rem;
+            }
+
+            .contact-item {
+                padding: 10px;
+            }
+
+            .contact-icon {
+                width: 35px;
+                height: 35px;
+            }
+
+            .contact-info a,
+            .contact-info span {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>BreakUp?</h1>
+            <p class="tagline">Stay or Go - Your Rational Breakup Decision Assistant</p>
+        </div>
+
+        <div class="content">
+            <div class="section">
+                <h2>Contact Support</h2>
+                <div class="contact-card">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
+                        </div>
+                        <div class="contact-info">
+                            <h3>Email Support</h3>
+                            <a href="mailto:dounengce@163.com">dounengce@163.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            </svg>
+                        </div>
+                        <div class="contact-info">
+                            <h3>Developer</h3>
+                            <span>Fufeng Ge</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>App Features</h2>
+                <div class="faq-item">
+                    <h3>Relationship Health Test</h3>
+                    <p>Answer 20 simple questions to assess your relationship health score and get AI-powered advice.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Breakup Script Generator</h3>
+                    <p>Generate appropriate breakup scripts for different scenarios: peaceful breakup, accumulated conflicts, infidelity, or long-distance relationships.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Emotion Diary</h3>
+                    <p>Record your daily emotions after a breakup and track your healing journey with locally stored private entries.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-item">
+                    <h3>Is my data private?</h3>
+                    <p>Yes! All your data is stored locally on your device. We don't collect any personal information or require account registration.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Does the app work offline?</h3>
+                    <p>Most features work offline. Only the AI analysis features require an internet connection.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How do I report a bug or request a feature?</h3>
+                    <p>Please send us an email at <a href="mailto:dounengce@163.com">dounengce@163.com</a> with details about the issue or feature request.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Legal</h2>
+                <p>Please review our Privacy Policy to understand how we protect your data:</p>
+                <a href="https://golden-dango-63f8df.netlify.app/" class="btn" target="_blank">View Privacy Policy</a>
+            </div>
+
+            <div class="section">
+                <h2>Response Time</h2>
+                <p>We typically respond to all support inquiries within 24-48 hours. For urgent matters, please include "Urgent" in your email subject line.</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2025 BreakUp?. All rights reserved.</p>
+            <p>Version 1.0.0 | Developed by Fufeng Ge</p>
+        </div>
+    </div>
+</body>
+</html>
